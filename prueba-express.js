@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 
-app.get('/chicos', function(pet, res) {
-  res.send('Hola Mundo!');
+app.get('/archivo', function(pet, res) {
+  res.sendFile(path.join(__dirname, './', 'prueba.html'));
 });
 
 app.listen(8001, function() {
