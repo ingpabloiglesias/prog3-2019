@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# Directory settings MAC 
+.DS_Store

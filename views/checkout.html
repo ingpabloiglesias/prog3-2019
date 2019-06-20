@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a class="navbar-brand" href="#">P3.js</a>
+  </nav>
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+          <div class="jumbotron">
+            <h1>Checkout</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <form method="post" action="#">
+            <div class="form-group">
+              <label for="email">Nombre:</label>
+              <input type="text" name="nombre" placeholder="nombre" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="email">Apellido:</label>
+              <input type="text" name="apellido" placeholder="apellido" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="email">Sexo:</label>
+              <select name="sexo" class="form-control">
+                <option value="hombre">hombre</option>
+                <option value="mujer" selected>mujer</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="email">Nacimiento:</label>
+          <input type="date" name="fecha" class="form-control">
+      </div>
+      <input type="submit" value="enviar" class="btn btn-success">
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>
