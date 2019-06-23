@@ -5,6 +5,8 @@ Repositorio de Lautaro para practicar en Prog 3 - ISVP
 Instalar docker
 > Por favor siga la [guia oficial de docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
+buildear imagen
+
 ```
 docker build . -t prog3
 ```
