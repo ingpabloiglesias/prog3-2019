@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="">
+    <p>
+        <input id="name" type="text">nombre</input>
+        </p>
+             <p>
+                <input id="lastname" type="text">apellido</input>
+                    </p>
+                    <label for="tip">Tipo de Formato</label>
+                    <select class="custom-select d-block w-100" id="tip" required="">
+                        <option value="">Formato...</option>
+                            <option value="cc">CamelCase</option>
+                                <option value="cci">CamelCase Inverso</option>
+                                    <option value="spc">Separado por coma</option>
+                                        <option value="kc">Kebab Case</option>
+                                    </select>
+                         <p>
+                             <input type="text">genero</input>
+                              </p>
+                                 <p>
+                                     <input id="date" type="date">fecha de nacimiento</input>
+                                        </p>
+                                        <button id="boton" type="submit" onclick="Ejecutar()">ENVIAR FORMULARIO</button>
+                                        
+</form>
+<script>
+        function Ejecutar(){
+        let nombre= document.getElementById("name").value;
+        let apellido= document.getElementById("lastname").value;
+        let fecha= document.getElementById("date").value;
+        let formato= document.getElementById("tip").value;
+        let act= new Date();
+        let año= act.getFullYear();
+        let año2=0;
+        let edad=0;
+        let resp= " ";
+        fecha= new Date(fecha);
+        año2 = fecha.getFullYear();
+        function getEdad(){
+           return edad = año - año2;
+        }
+        function getNombreApellido(){
+            if (formato == "cc"){
+                resp=nombre+apellido;
+            };
+            if (formato == "cci"){
+                resp=apellido+nombre;
+            };
+            if (formato == "spc"){
+                resp=apellido+", "+nombre;
+            };
+            if (formato == "kc"){
+                resp=nombre+"-"+apellido;
+            };
+        }
+        getEdad();
+        getNombreApellido();
+        return alert("El nombre del usuario es: "+resp+". La edad del usuario es de: "+edad);
+        }
+        </script>
+</body>
+</html>
